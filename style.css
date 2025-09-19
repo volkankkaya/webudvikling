@@ -13,15 +13,24 @@ body {
 
 h1 {
     font-family: "Agency FB";
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 35px;
+    margin-top: -115px;
+    margin-bottom: 65px;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .big-text {
     font-family: "Agency FB";
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
+    margin-bottom: -120px;
 }
 
 
@@ -38,6 +47,7 @@ h1 {
     color: #f1f1f1;
     cursor: pointer;
     transition: 0.2s;
+    margin-bottom: 20px;
 }
 
 
@@ -48,42 +58,74 @@ h1 {
 }
 
 
-
-
-
-
-
-.subtitle {
-    margin-top: 15px;
-    font-size: 12px;
+h2{
+    font-family: "Agency FB";
+    font-size: 75px;
+    margin-top: -115px;
+    margin-bottom: 65px;
 }
 
 
-.btn:hover {
+.difficulty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.easy-btn {
+    display: inline-block;
+    margin: 150px 0;
+    padding: 15px 130px;
+    font-family: "Agency FB";
+    font-size: 45px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     background: #41C049;
     color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
 }
 
 
-#game {
-    display: none;
-    margin-top: 30px;
+.medium-btn {
+    display: inline-block;
+    margin: 150px 0;
+    padding: 15px 130px;
+    font-family: "Agency FB";
+    font-size: 45px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #B2BB2A;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
 }
 
 
-input {
-    padding: 12px;
-    font-size: 18px;
-    width: 120px;
-    text-align: center;
-    border: 2px solid white;
-    background: black;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-}
-
-
-.message {
-    margin-top: 25px;
-    font-size: 16px;
+.hard-btn {
+    display: inline-block;
+    margin: 150px 0;
+    padding: 15px 130px;
+    font-family: "Agency FB";
+    font-size: 45px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #C92A2A;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
 }
