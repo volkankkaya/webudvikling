@@ -12,10 +12,11 @@ body {
 
 
 h1 {
-    font-family: "Agency FB";
-    font-size: 35px;
-    margin-top: -115px;
-    margin-bottom: 65px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: -125px;
+    margin-bottom: 185px;
 }
 
 
@@ -27,20 +28,24 @@ h1 {
 
 
 .big-text {
-    font-family: "Agency FB";
-    font-size: 70px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 35px;
+    font-weight: lighter;
     margin-bottom: -120px;
 }
 
 
 .btn {
-    display: inline-block;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
     margin: 150px 0;
     padding: 15px 130px;
-    font-family: "Agency FB";
-    font-size: 45px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
     border: none;
     border-radius: 8px;
     background: #41C049;
@@ -48,21 +53,23 @@ h1 {
     cursor: pointer;
     transition: 0.2s;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 
 .small-text {
-    font-family: "Agency FB";
-    font-size: 20px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    font-weight: lighter;
 }
 
 
 h2{
-    font-family: "Agency FB";
-    font-size: 75px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
     margin-top: -115px;
-    margin-bottom: 75px;
+    margin-bottom: 85px;
 }
 
 
@@ -82,12 +89,15 @@ h2{
 
 
 .easy-btn {
-    width: 250px;
-    margin: 150px 0;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
     padding: 15px 130px;
-    font-family: "Agency FB";
-    font-size: 45px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
     border: none;
     border-radius: 8px;
     background: #41C049;
@@ -95,16 +105,20 @@ h2{
     cursor: pointer;
     transition: 0.2s;
     margin: 12px;
+    text-decoration: none;
 }
 
 
 .medium-btn {
-    width: 250px;
-    margin: 150px 0;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
     padding: 15px 130px;
-    font-family: "Agency FB";
-    font-size: 45px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
     border: none;
     border-radius: 8px;
     background: #B2BB2A;
@@ -112,16 +126,20 @@ h2{
     cursor: pointer;
     transition: 0.2s;
     margin: 12px;
+    text-decoration: none;
 }
 
 
 .hard-btn {
-    width: 250px;
-    margin: 150px 0;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
     padding: 15px 130px;
-    font-family: "Agency FB";
-    font-size: 45px;
-    font-weight: bold;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
     border: none;
     border-radius: 8px;
     background: #C92A2A;
@@ -129,4 +147,5 @@ h2{
     cursor: pointer;
     transition: 0.2s;
     margin: 12px;
+    text-decoration: none;
 }
