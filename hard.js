@@ -1,4 +1,4 @@
-const correctYear = 2005; // YouTube was founded in 2005
+const correctYear = 1991; // Cold War officially ended and Nevermind was released in 1991
 let guessCount = 0;
 
 const input = document.getElementById("guessInput");

@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Year Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
+<p class="heading">GUESS THE YEAR</p>
+
+<div class="medium-mode">MEDIUM MODE</div>
+
+<div class="hint">Hint: The year people feared the world might've ended when the clock struck midnight.</div>
+
+<input type="number" id="guessInput" placeholder="Enter year">
+
+<div class="feedback" id="feedback"></div>
+
+<button id="submitBtn">SUBMIT GUESS</button>
+
+<div class="wrong" id="wrongMsg"></div>
+
+<div class="counter" id="counter">NUMBER OF GUESSES SO FAR: 0</div>
+
+<script src="medium.js"></script>
 
 </body>
 </html>

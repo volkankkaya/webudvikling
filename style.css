@@ -11,6 +11,8 @@ body {
 }
 
 
+
+/* PRESS START */
 h1 {
     font-family: "Press Start 2P", cursive;
     font-size: 17px;
@@ -64,6 +66,8 @@ h1 {
 }
 
 
+
+/* CHOOSE DIFFICULTY */
 h2{
     font-family: "Press Start 2P", cursive;
     font-size: 37px;
@@ -148,4 +152,251 @@ h2{
     transition: 0.2s;
     margin: 12px;
     text-decoration: none;
+}
+
+
+
+/* EASY MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.easy-mode {
+    background-color: #41C049;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+input {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
+}
+
+
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* MEDIUM MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.medium-mode {
+    background-color: #B2BB2A;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+input {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
+}
+
+
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* HARD MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.hard-mode {
+    background-color: #C92A2A;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+.input {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
+}
+
+
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
 }
