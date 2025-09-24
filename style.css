@@ -11,79 +11,392 @@ body {
 }
 
 
+
+/* PRESS START */
 h1 {
-    font-family: "Agency FB";
-    height: 100vh;
-    font-size: 40px;
-    margin-bottom: 40px;
-    padding: 80px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: -125px;
+    margin-bottom: 185px;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .big-text {
-    font-family: "Agency FB";
-    font-size: 50px;
-    font-weight: bold;
-}
-
-
-.small-text {
-    font-weight: bold;
-}
-
-
-
-
-
-
-
-.subtitle {
-    margin-top: 15px;
-    font-size: 12px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-bottom: -120px;
 }
 
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 20px 60px;
-    font-size: 22px;
-    font-weight: bold;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    margin: 150px 0;
+    padding: 15px 130px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
     border: none;
     border-radius: 8px;
     background: #41C049;
     color: #f1f1f1;
     cursor: pointer;
     transition: 0.2s;
-    box-shadow: 0 4px 0 #228b22;
+    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 
-.btn:hover {
+.small-text {
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+
+
+/* CHOOSE DIFFICULTY */
+h2{
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+    margin-bottom: 85px;
+}
+
+
+.difficulty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.difficulty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.easy-btn {
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    padding: 15px 130px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    border: none;
+    border-radius: 8px;
     background: #41C049;
     color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 12px;
+    text-decoration: none;
 }
 
 
-#game {
-    display: none;
-    margin-top: 30px;
+.medium-btn {
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    padding: 15px 130px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    border: none;
+    border-radius: 8px;
+    background: #B2BB2A;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 12px;
+    text-decoration: none;
+}
+
+
+.hard-btn {
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    padding: 15px 130px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 25px;
+    font-weight: lighter;
+    border: none;
+    border-radius: 8px;
+    background: #C92A2A;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 12px;
+    text-decoration: none;
+}
+
+
+
+/* EASY MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.easy-mode {
+    background-color: #41C049;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
 }
 
 
 input {
-    padding: 12px;
-    font-size: 18px;
-    width: 120px;
-    text-align: center;
-    border: 2px solid white;
-    background: black;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
 }
 
 
-.message {
-    margin-top: 25px;
-    font-size: 16px;
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* MEDIUM MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.medium-mode {
+    background-color: #B2BB2A;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+input {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
+}
+
+
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* HARD MODE */
+.heading {
+    font-family: "Press Start 2P", cursive;
+    font-size: 37px;
+    font-weight: lighter;
+    margin-top: -115px;
+}
+
+
+.hard-mode {
+    background-color: #C92A2A;
+    color: #f1f1f1;
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 12px 28px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    width: 200px;
+}
+
+
+.hint {
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+.input {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 25px;
+    width: 500px;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #C8C8C8;
+}
+
+
+.feedback {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.button {
+    background-color: #C8C8C8;
+    border: none;
+    padding: 20px;
+    width: 275px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.wrong {
+    font-family: "Press Start 2P", cursive;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #C92A2A;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+.counter {
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 20px;
 }

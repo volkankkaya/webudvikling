@@ -1,4 +1,4 @@
-const correctYear = 2005; // YouTube was founded in 2005
+const correctYear = 2012; // People thought the world was going to end in 2012
 let guessCount = 0;
 
 const input = document.getElementById("guessInput");
