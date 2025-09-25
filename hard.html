@@ -2,9 +2,176 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Guess the Year</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Press Start 2P', monospace, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .lives {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: red;
+        }
+
+        .hint {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        .feedback {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            font-family: inherit;
+            font-size: 28px;
+            padding: 14px;
+            width: 400px;
+            text-align: center;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #999;
+            border: none;
+            padding: 16px 30px;
+            font-size: 22px;
+            font-family: inherit;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .wrong {
+            color: red;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .counter {
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
+<h1>GUESS THE YEAR</h1>
 
+<!-- Life system -->
+<div class="lives" id="lives">❤️❤️❤️❤️❤️</div>
+
+<!-- NEW HINT -->
+<div class="hint">Hint: The year people feared the world might've ended when the clock struck midnight.</div>
+
+<input type="number" id="guessInput" placeholder="Enter year">
+<div class="feedback" id="feedback"></div>
+<button id="submitBtn">SUBMIT GUESS</button>
+<div class="wrong" id="wrongMsg"></div>
+<div class="counter" id="counter">NUMBER OF GUESSES SO FAR: 0</div>
+
+<script>
+    const correctYear = 2000; // Y2K hint answer
+    let guessCount = 0;
+    let lives = 3;
+
+    const input = document.getElementById("guessInput");
+    const feedback = document.getElementById("feedback");
+    const wrongMsg = document.getElementById("wrongMsg");
+    const counter = document.getElementById("counter");
+    const submitBtn = document.getElementById("submitBtn");
+    const livesDisplay = document.getElementById("lives");
+
+    submitBtn.addEventListener("click", submitGuess);
+
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") submitGuess();
+    });
+
+    function updateLives() {
+        livesDisplay.textContent = "❤️".repeat(lives);
+    }
+
+    function submitGuess() {
+        if (lives <= 0) return; // No more guesses allowed
+
+        let guess = parseInt(input.value);
+        guessCount++;
+
+        if (isNaN(guess)) {
+            feedback.textContent = "Please enter a valid year!";
+            feedback.style.color = "yellow";
+            return;
+        }
+
+        let difference = Math.abs(correctYear - guess);
+
+        if (guess === correctYear) {
+            feedback.textContent = "🎉 VERY HOT! Correct!";
+            feedback.style.color = "lime";
+            wrongMsg.textContent = "";
+            input.disabled = true;
+            submitBtn.disabled = true;
+        } else {
+            if (difference <= 1) {
+                feedback.textContent = "🔥 VERY HOT!";
+                feedback.style.color = "red";
+            } else if (difference <= 3) {
+                feedback.textContent = "🔥 HOT!";
+                feedback.style.color = "orangered";
+            } else if (difference <= 6) {
+                feedback.textContent = "WARM";
+                feedback.style.color = "orange";
+            } else if (difference <= 10) {
+                feedback.textContent = "COLD";
+                feedback.style.color = "#3399ff";
+            } else if (difference <= 20) {
+                feedback.textContent = "❄️ COLDER";
+                feedback.style.color = "blue";
+            } else {
+                feedback.textContent = "🥶 VERY COLD!";
+                feedback.style.color = "#66ccff";
+            }
+
+            wrongMsg.textContent = "Wrong";
+            input.value = "";
+            input.focus();
+
+            // Lose a life
+            lives--;
+            updateLives();
+
+            if (lives === 0) {
+                feedback.textContent = "💀 GAME OVER! The year was " + correctYear;
+                feedback.style.color = "gray";
+                input.disabled = true;
+                submitBtn.disabled = true;
+            }
+        }
+
+        counter.textContent = "NUMBER OF GUESSES SO FAR: " + guessCount;
+    }
+
+    updateLives();
+    input.focus();
+</script>
 </body>
 </html>
