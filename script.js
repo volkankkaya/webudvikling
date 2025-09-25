@@ -1,11 +1,13 @@
 const correctYear = 2005; // YouTube was founded in 2005
 let guessCount = 0;
+let guessHistory = []; // gemmer alle tidligere gæt
 
 const input = document.getElementById("guessInput");
 const feedback = document.getElementById("feedback");
 const wrongMsg = document.getElementById("wrongMsg");
 const counter = document.getElementById("counter");
 const submitBtn = document.getElementById("submitBtn");
+const historyDisplay = document.getElementById("history"); // nyt element i HTML
 
 // Submit when button clicked
 submitBtn.addEventListener("click", submitGuess);
@@ -14,6 +16,10 @@ submitBtn.addEventListener("click", submitGuess);
 input.addEventListener("keydown", function (e) {
     if (e.key === "Enter") submitGuess();
 });
+
+function updateHistory() {
+    historyDisplay.textContent = "Your guesses: " + guessHistory.join(", ");
+}
 
 function submitGuess() {
     let guess = parseInt(input.value);
@@ -26,10 +32,23 @@ function submitGuess() {
         return;
     }
 
+    // Tjek om tallet allerede er gættet
+    if (guessHistory.includes(guess)) {
+        feedback.textContent = "⚠️ YOU ALREADY GUESSED " + guess;
+        feedback.style.color = "yellow";
+        input.value = "";
+        input.focus();
+        return;
+    }
+
+    // Tilføj gættet til historikken
+    guessHistory.push(guess);
+    updateHistory();
+
     let difference = Math.abs(correctYear - guess);
 
     if (guess === correctYear) {
-        feedback.textContent = "🎉 CORRECT!";
+        feedback.textContent = "✅ CORRECT!";
         feedback.style.color = "lime";
         wrongMsg.textContent = "";
         // You might want to keep the correct value visible, or disable input here.
@@ -58,7 +77,7 @@ function submitGuess() {
 
 
 
-        wrongMsg.textContent = "Wrong";
+        wrongMsg.textContent = "WRONG";
 
         // --- THE CHANGE: clear the input and return focus so the user can type immediately ---
         input.value = "";

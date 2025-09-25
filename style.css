@@ -238,6 +238,13 @@ button {
 }
 
 
+#history {
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    margin-top: 50px;
+}
+
+
 /* MEDIUM MODE */
 .heading {
     font-family: "Press Start 2P", cursive;
@@ -257,6 +264,13 @@ button {
     border-radius: 12px;
     margin-bottom: 100px;
     width: 200px;
+}
+
+
+.lives {
+    margin-bottom: 50px;
+    margin-top: -50px;
+    font-size: 50px;
 }
 
 
@@ -319,6 +333,19 @@ button {
     margin-top: 20px;
 }
 
+.lives {
+    margin-bottom: 50px;
+    margin-top: -50px;
+    font-size: 50px;
+}
+
+
+#history {
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    margin-top: 50px;
+}
+
 
 /* HARD MODE */
 .heading {
@@ -339,6 +366,13 @@ button {
     border-radius: 12px;
     margin-bottom: 100px;
     width: 200px;
+}
+
+
+.lives {
+    margin-bottom: 50px;
+    margin-top: -50px;
+    font-size: 50px;
 }
 
 
@@ -399,4 +433,11 @@ button {
     font-family: "Press Start 2P", cursive;
     font-size: 20px;
     margin-top: 20px;
+}
+
+
+#history {
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    margin-top: 50px;
 }
