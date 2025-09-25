@@ -75,6 +75,35 @@
         .counter {
             font-size: 20px;
         }
+
+        /* UPDATED: history box on left middle */
+        #history {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            font-size: 16px;
+            max-height: 60%;
+            overflow-y: auto;
+            width: 160px;
+        }
+
+        #history h2 {
+            font-size: 18px;
+            margin: 5px 0;
+            text-decoration: underline;
+        }
+
+        #historyList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #historyList li {
+            margin: 3px 0;
+        }
     </style>
 </head>
 <body>
@@ -89,8 +118,14 @@
 <div class="wrong" id="wrongMsg"></div>
 <div class="counter" id="counter">NUMBER OF GUESSES SO FAR: 0</div>
 
+<!-- History section (now left middle) -->
+<div id="history">
+    <h2>Guess History</h2>
+    <ul id="historyList"></ul>
+</div>
+
 <script>
-    const correctYear = 2005; // YouTube was founded in 2005
+    const correctYear = 2005;
     let guessCount = 0;
 
     const input = document.getElementById("guessInput");
@@ -98,11 +133,10 @@
     const wrongMsg = document.getElementById("wrongMsg");
     const counter = document.getElementById("counter");
     const submitBtn = document.getElementById("submitBtn");
+    const historyList = document.getElementById("historyList");
 
-    // Submit when button clicked
     submitBtn.addEventListener("click", submitGuess);
 
-    // Also submit when pressing Enter inside the input
     input.addEventListener("keydown", function (e) {
         if (e.key === "Enter") submitGuess();
     });
@@ -114,7 +148,6 @@
         if (isNaN(guess)) {
             feedback.textContent = "Please enter a valid year!";
             feedback.style.color = "yellow";
-            // don't clear here — let the user correct their input
             return;
         }
 
@@ -124,9 +157,7 @@
             feedback.textContent = "🎉 VERY HOT! Correct!";
             feedback.style.color = "lime";
             wrongMsg.textContent = "";
-            // You might want to keep the correct value visible, or disable input here.
         } else {
-            // Hot/Cold levels
             if (difference <= 1) {
                 feedback.textContent = "🔥 VERY HOT!";
                 feedback.style.color = "red";
@@ -147,21 +178,19 @@
                 feedback.style.color = "#66ccff";
             }
 
-
-
-
             wrongMsg.textContent = "Wrong";
-
-            // --- THE CHANGE: clear the input and return focus so the user can type immediately ---
             input.value = "";
             input.focus();
-            // -------------------------------------------------------------------------------
         }
 
         counter.textContent = "NUMBER OF GUESSES SO FAR: " + guessCount;
+
+        // Add guess to history list
+        const li = document.createElement("li");
+        li.textContent = guess;
+        historyList.appendChild(li);
     }
 
-    // optional: focus the input when page loads
     input.focus();
 </script>
 </body>
