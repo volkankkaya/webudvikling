@@ -52,6 +52,8 @@
 
     function updateLives() {
         livesDisplay.textContent = "❤️".repeat(lives);
+        livesDisplay.classList.add("lives-pop");
+        setTimeout(() => livesDisplay.classList.remove("lives-pop"), 400);
     }
 
     function updateHistory() {
