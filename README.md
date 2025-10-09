@@ -11,6 +11,7 @@ Spillet har tre sværhedsgrader: Easy, Medium og Hard.
 - **Easy**: Ubegrænset antal gæt.
 - **Medium**: 5 liv.
 - **Hard**: 3 liv.
+- **Extreme**: 3 liv + 30 sekunder.
 
 ## Teknologi
 - HTML
