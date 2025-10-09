@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Year Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+<p class="heading">GUESS THE YEAR</p>
+
+<div class="extreme-mode">EXTREME MODE</div>
+
+<div class="lives" id="lives">❤️❤️❤️</div>
+
+<div class="hint">Hint: The year of the great crash on Wall Street.</div>
+
+<input type="number" id="guessInput" placeholder="Enter year">
+
+<div class="feedback" id="feedback"></div>
+
+<button id="submitBtn">SUBMIT GUESS</button>
+
+<div class="wrong" id="wrongMsg"></div>
+
+<div class="counter" id="counter">NUMBER OF GUESSES SO FAR: 0</div>
+
+<p id="history">YOUR GUESSES: </p>
+
+<script>
+    const correctYear = 1929; // the great depression
+    let guessCount = 0;
+    let lives = 3;
+    let guessHistory = [];
+
+    const input = document.getElementById("guessInput");
+    const feedback = document.getElementById("feedback");
+    const wrongMsg = document.getElementById("wrongMsg");
+    const counter = document.getElementById("counter");
+    const submitBtn = document.getElementById("submitBtn");
+    const livesDisplay = document.getElementById("lives");
+    const historyDisplay = document.getElementById("history"); // nyt element i HTML
+
+    submitBtn.addEventListener("click", submitGuess);
+
+    input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") submitGuess();
+    });
+
+    function updateLives() {
+        livesDisplay.textContent = "❤️".repeat(lives);
+        livesDisplay.classList.add("lives-pop");
+        setTimeout(() => livesDisplay.classList.remove("lives-pop"), 400);
+    }
+
+    function updateHistory() {
+        historyDisplay.textContent = "Your guesses: " + guessHistory.join(", ");
+    }
+
+    function submitGuess() {
+        if (lives <= 0) return; // No more guesses allowed
+
+        let guess = parseInt(input.value);
+
+        if (isNaN(guess)) {
+            feedback.textContent = "Please enter a valid year!";
+            feedback.style.color = "yellow";
+            return;
+        }
+
+        // Tjek om tallet allerede er gættet
+        if (guessHistory.includes(guess)) {
+            feedback.textContent = "⚠️ YOU ALREADY GUESSED " + guess;
+            feedback.style.color = "yellow";
+            input.value = "";
+            input.focus();
+            return;
+        }
+
+        // Tilføj gættet til historikken
+        guessHistory.push(guess);
+        updateHistory();
+
+        guessCount++;
+
+        if (guess === correctYear) {
+            feedback.textContent = "✅ CORRECT!";
+            feedback.style.color = "lime";
+            wrongMsg.textContent = "";
+            input.disabled = true;
+            submitBtn.disabled = true;
+        } else {
+            if (guess < correctYear) {
+                feedback.textContent = "⬆️ HIGHER";
+                feedback.style.color = "orange";
+            } else {
+                feedback.textContent = "⬇️ LOWER";
+                feedback.style.color = "blue";
+            }
+
+            wrongMsg.textContent = "WRONG";
+            input.value = "";
+            input.focus();
+
+            // Lose a life
+            lives--;
+            updateLives();
+
+            if (lives === 0) {
+                feedback.textContent = "💀 GAME OVER! THE YEAR WAS " + correctYear;
+                feedback.style.color = "gray";
+                input.disabled = true;
+                submitBtn.disabled = true;
+            }
+        }
+
+        counter.textContent = "NUMBER OF GUESSES SO FAR: " + guessCount;
+    }
+
+    updateLives();
+    input.focus();
+</script>
+
+</body>
+</html>
